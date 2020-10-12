@@ -1,0 +1,50 @@
+Source: python-itsdangerous
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Uploaders: Simon Fondrie-Teitler <simonft@riseup.net>, Thomas Goirand <zigo@debian.org>, Julien Puydt <jpuydt@debian.org>
+Section: python
+Priority: optional
+Build-Depends: debhelper-compat (= 13),
+               dh-python,
+               python3-all,
+               python3-pallets-sphinx-themes,
+               python3-setuptools,
+               python3-sphinx
+Vcs-Browser: https://salsa.debian.org/python-team/packages/python-itsdangerous
+Vcs-Git: https://salsa.debian.org/python-team/packages/python-itsdangerous.git
+Homepage: https://itsdangerous.palletsprojects.com/
+Standards-Version: 4.5.0
+Rules-Requires-Root: no
+Testsuite: autopkgtest-pkg-python
+
+Package: python3-itsdangerous
+Architecture: all
+Depends: ${misc:Depends}, ${python3:Depends}
+Recommends: python3-simplejson
+Description: Various helpers to pass trusted data to untrusted environment - Python 3.x
+ itsdangerous provides a module that is a port of the django signing
+ module.  It's not directly copied but some changes were applied to
+ make it work better on its own.
+ .
+ itsdangerous allows web applications to use a key only it knows to
+ cryptographically sign data and hand it over to someone else (e.g. a
+ user).  When it gets the data back it can easily ensure that nobody
+ tampered with it.
+ .
+ This package provides the itsdangerous Python module for Python 3.x.
+
+Package: python-itsdangerous-doc
+Architecture: all
+Multi-Arch: foreign
+Section: doc
+Depends: ${misc:Depends}, ${sphinxdoc:Depends}
+Description: Various helpers to pass trusted data to untrusted environment - doc
+ itsdangerous provides a module that is a port of the django signing
+ module.  It's not directly copied but some changes were applied to
+ make it work better on its own.
+ .
+ itsdangerous allows web applications to use a key only it knows to
+ cryptographically sign data and hand it over to someone else (e.g. a
+ user).  When it gets the data back it can easily ensure that nobody
+ tampered with it.
+ .
+ This package provides the documentation.

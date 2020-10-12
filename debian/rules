@@ -1,0 +1,16 @@
+#!/usr/bin/make -f
+
+export PYBUILD_NAME=itsdangerous
+export DEB_BUILD_MAINT_OPTIONS=hardening=+all
+
+%:
+	dh $@ --buildsystem=pybuild --with python3,sphinxdoc
+
+override_dh_sphinxdoc:
+ifeq (,$(findstring nodocs, $(DEB_BUILD_OPTIONS)))
+	PYTHONPATH=src python3 -m sphinx -b html docs $(CURDIR)/debian/python-itsdangerous-doc/usr/share/doc/python-itsdangerous-doc/html
+	dh_sphinxdoc -O--buildsystem=pybuild
+endif
+
+override_dh_installchangelogs:
+	dh_installchangelogs CHANGES.rst

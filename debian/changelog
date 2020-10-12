@@ -1,0 +1,92 @@
+python-itsdangerous (1.1.0-3) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+
+  [ Ondřej Nový ]
+  * d/control: Update Maintainer field with new Debian Python Team
+    contact address.
+  * d/control: Update Vcs-* fields with new Debian Python Team Salsa
+    layout.
+
+  [ Julien Puydt ]
+  * Declare d/rules doesn't require root.
+  * Bump dh compat to 13.
+  * Rewrite d/watch (use github directly, don't detect alpha releases).
+  * Document the patch wasn't forwarded because it's specific (lintian
+    warning).
+
+ -- Julien Puydt <jpuydt@debian.org>  Mon, 12 Oct 2020 17:28:52 +0200
+
+python-itsdangerous (1.1.0-2) unstable; urgency=medium
+
+  * New source-only upload to allow migration to testing.
+
+ -- Julien Puydt <jpuydt@debian.org>  Fri, 28 Feb 2020 08:55:13 +0100
+
+python-itsdangerous (1.1.0-1) unstable; urgency=medium
+
+  * New upstream release 1.1.0.
+  * Add myself as uploader.
+  * Refresh patches.
+  * Update urls in d/control.
+  * Mark the doc package as M-A: foreign following hinter.
+  * Update b-deps.
+  * Rewrite d/rules.
+  * Swith from d/compat to dh-compat, and level 12.
+  * Bump std-vers to 4.5.0.
+
+ -- Julien Puydt <jpuydt@debian.org>  Thu, 27 Feb 2020 23:08:50 +0100
+
+python-itsdangerous (0.24+dfsg1-2.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Drop python2 support; Closes: #937848
+
+ -- Sandro Tosi <morph@debian.org>  Sat, 28 Dec 2019 00:41:35 -0500
+
+python-itsdangerous (0.24+dfsg1-2) unstable; urgency=medium
+
+  * Team upload.
+  * Moved python-simplejson to recommends and added python3-simplejson too
+  * Capitalize Python in package description
+  * Fixed Vcs-* urls
+  * Added dh-python to build depends
+  * Enabled autopkgtest-pkg-python testsuite
+  * d/copyright
+    - Removed / from begin of Debian entry
+    - Added myself to Debian part
+  * Standards-Version is 3.9.8 now (no changes needed)
+
+ -- Ondřej Nový <onovy@debian.org>  Thu, 21 Jul 2016 18:13:31 +0200
+
+python-itsdangerous (0.24+dfsg1-1) unstable; urgency=medium
+
+  [ Simon Fondrie-Teitler ]
+  * New upstream release.
+  * Bump standards version.
+
+  [ Thomas Goirand ]
+  * Add packaging of sphinx doc.
+
+ -- Simon Fondrie-Teitler <simonft@riseup.net>  Sat, 24 May 2014 16:53:52 -0400
+
+python-itsdangerous (0.22+dfsg1-1) unstable; urgency=low
+
+  * New upstream release.
+  * Added a debian/gbp.conf
+  * Added debian/rules for upstream repository git management.
+  * Ran wrap-and-sort, moved Homepage filed at the end of 1st block.
+  * Removed useless python (>= 2.6) depends:.
+  * Adds the build of python3 package.
+  * Adds myself as uploader, sets python-module as team, and adds VCS fields.
+  * rm -rf build itsdangerous.egg-info on clean.
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 17 Jul 2013 05:33:11 +0000
+
+python-itsdangerous (0.17-1) unstable; urgency=low
+
+  * Initial release. Closes: 703934
+
+ -- Simon Fondrie-Teitler <simonft@riseup.net>  Mon, 25 Mar 2013 17:06:37 -0500

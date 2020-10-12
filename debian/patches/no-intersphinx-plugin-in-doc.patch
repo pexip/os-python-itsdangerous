@@ -1,0 +1,17 @@
+Description: Do not use Intersphinx plugin in sphinx doc
+ This avoids network access.
+Author: Thomas Goirand <zigo@debian.org>
+Forwarded: Debian-specific
+Last-Update: 2014-06-01
+
+--- python-itsdangerous.orig/docs/conf.py
++++ python-itsdangerous/docs/conf.py
+@@ -11,7 +11,7 @@
+ # General --------------------------------------------------------------
+ 
+ master_doc = "index"
+-extensions = ["sphinx.ext.autodoc", "sphinx.ext.intersphinx", "pallets_sphinx_themes"]
++extensions = ["sphinx.ext.autodoc", "pallets_sphinx_themes"]
+ intersphinx_mapping = {"python": ("https://docs.python.org/3/", None)}
+ 
+ # HTML -----------------------------------------------------------------

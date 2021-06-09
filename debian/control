@@ -1,9 +1,10 @@
 Source: python-itsdangerous
-Maintainer: Debian Python Team <team+python@tracker.debian.org>
-Uploaders: Simon Fondrie-Teitler <simonft@riseup.net>, Thomas Goirand <zigo@debian.org>, Julien Puydt <jpuydt@debian.org>
+Maintainer: Pexip AS <packaging@pexip.com>
+XSBC-Pexip-Original-Maintainer: Debian Python Team <team+python@tracker.debian.org>
+XSBC-Pexip-Original-Uploaders: Simon Fondrie-Teitler <simonft@riseup.net>, Thomas Goirand <zigo@debian.org>, Julien Puydt <jpuydt@debian.org>
 Section: python
 Priority: optional
-Build-Depends: debhelper-compat (= 13),
+Build-Depends: debhelper-compat (= 12),
                dh-python,
                python3-all,
                python3-pallets-sphinx-themes,
@@ -15,6 +16,7 @@ Homepage: https://itsdangerous.palletsprojects.com/
 Standards-Version: 4.5.0
 Rules-Requires-Root: no
 Testsuite: autopkgtest-pkg-python
+XS-Pexip-Upstream: http://ftp.debian.org/debian/ bullseye
 
 Package: python3-itsdangerous
 Architecture: all
